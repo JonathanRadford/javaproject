@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import GameList from "../../Components/GameList/GameList";
+import "./Home.scss";
 
 function Home() {
   const [game, setGame] = useState([]);
@@ -17,7 +18,7 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="GameList">
       <GameList games={game} />
     </div>
   );

@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+}
+.nav {
+  background-color: #25274d;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 0.2rem solid #2964ba;
+  &__add {
+    color: #aaabb8;
+    text-decoration: none;
+  }
+  &__home {
+    color: #aaabb8;
+    text-decoration: none;
+  }
+  &__search {
+    color: #aaabb8;
+    text-decoration: none;
+  }
+}
