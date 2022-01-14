@@ -1,11 +1,13 @@
-import { Routes, Route } from "react-router-dom";
+import Form from "./Components/Form/Form";
+import Home from "../src/Pages/Home/Home";
 
-const App = () => {
+const Dashboard = () => {
   return (
-    <Routes>
-      <Route path="*" element={<h1>Home</h1>} />
-    </Routes>
+    <div>
+      <Home />
+      <Form />
+    </div>
   );
 };
 
-export default App;
+export default Dashboard;
