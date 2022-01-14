@@ -24,6 +24,7 @@ const Form = () => {
       .then((json) => console.log(json))
       .catch((err) => console.log(err));
     e.target.reset();
+    window.location.reload();
   };
 
   return (
