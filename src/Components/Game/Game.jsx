@@ -1,4 +1,4 @@
-import "./Greeting.scss";
+import "./Game.scss";
 
 const Greeting = (props) => {
   const { createdBy, game, gameLength, genre, description } = props.greeting;

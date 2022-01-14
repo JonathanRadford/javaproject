@@ -1,5 +1,5 @@
-import "./GreetingList.scss";
-import Greeting from "../Greeting/Greeting";
+import "./GameList.scss";
+import Game from "../Game/Game";
 
 const GreetingList = (props) => {
   return (
@@ -7,7 +7,7 @@ const GreetingList = (props) => {
       <h2 className="heading">Find your Game!</h2>
       <div className="container">
         {props.games &&
-          props.games.map((game) => <Greeting key={game.id} greeting={game} />)}
+          props.games.map((game) => <Game key={game.id} greeting={game} />)}
       </div>
     </>
   );

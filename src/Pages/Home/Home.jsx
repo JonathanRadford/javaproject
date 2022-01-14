@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Navbar from "../../Components/Navbar/Navbar";
-import GreetingList from "../../Components/GreetingList/GreetingList";
+import GameList from "../../Components/GameList/GameList";
 
 function Home() {
   const [game, setGame] = useState([]);
@@ -16,10 +15,10 @@ function Home() {
   useEffect(() => {
     getGame();
   }, []);
+
   return (
     <div>
-      <Navbar />
-      <GreetingList games={game} />
+      <GameList games={game} />
     </div>
   );
 }

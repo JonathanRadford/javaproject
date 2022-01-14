@@ -1,11 +1,11 @@
-import Form from "./Components/Form/Form";
 import Home from "../src/Pages/Home/Home";
+import Navbar from "./Components/Navbar/Navbar";
 
 const Dashboard = () => {
   return (
     <div>
+      <Navbar />
       <Home />
-      <Form />
     </div>
   );
 };
