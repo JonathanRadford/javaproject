@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import GameList from "../../Components/GameList/GameList";
 import "./Home.scss";
 
-function Home() {
+const Home = () => {
   const [game, setGame] = useState([]);
 
   const getGame = () => {
@@ -22,6 +22,6 @@ function Home() {
       <GameList games={game} />
     </div>
   );
-}
+};
 
 export default Home;

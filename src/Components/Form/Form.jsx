@@ -7,8 +7,7 @@ import "./Form.scss";
 const Form = () => {
   const [game, setGame] = useState({
     createdBy: "",
-    greeting: "",
-    originCountry: "",
+    game: "",
   });
 
   const handleSubmit = (e) => {
@@ -48,8 +47,8 @@ const Form = () => {
         />
         <input
           type="text"
-          placeholder="Description"
-          onInput={(e) => setGame({ ...game, description: e.target.value })}
+          placeholder="Comments"
+          onInput={(e) => setGame({ ...game, comments: e.target.value })}
         />
         <input
           type="text"

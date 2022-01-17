@@ -1,6 +1,6 @@
 {
 "homepage": "https://jonathanradford.github.io/javaproject/",
-  "name": "greeting-client",
+  "name": "game-finder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

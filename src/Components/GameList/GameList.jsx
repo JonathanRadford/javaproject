@@ -1,16 +1,16 @@
 import "./GameList.scss";
 import Game from "../Game/Game";
 
-const GreetingList = (props) => {
+const GameList = (props) => {
   return (
     <>
-      <h2 className="heading">Find your Game!</h2>
+      <h2 className="heading">Welcome to Game Finder!</h2>
       <div className="container">
         {props.games &&
-          props.games.map((game) => <Game key={game.id} greeting={game} />)}
+          props.games.map((game) => <Game key={game.id} game={game} />)}
       </div>
     </>
   );
 };
 
-export default GreetingList;
+export default GameList;

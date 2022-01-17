@@ -3,12 +3,9 @@ import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 function Navbar() {
-  const handleClick = () => {
-    console.log("clicked");
-  };
   return (
     <div className="nav">
-      <Link to={"/home"} onClick={handleClick} className="nav__home">
+      <Link to={"/home"} className="nav__home">
         <h2>Home</h2>{" "}
       </Link>
       <Link to={"/add"} className="nav__add">

@@ -1,7 +1,7 @@
 import "./Game.scss";
 
-const Greeting = (props) => {
-  const { createdBy, game, gameLength, genre, description } = props.greeting;
+const Game = (props) => {
+  const { createdBy, game, gameLength, genre, comments } = props.game;
 
   const handleClick = () => {};
 
@@ -11,9 +11,9 @@ const Greeting = (props) => {
       <p>Game Length: {gameLength} hours</p>
       <p>Added by: {createdBy}</p>
       <p>Genre: {genre}</p>
-      <p>{description}</p>
+      <p>{comments}</p>
     </div>
   );
 };
 
-export default Greeting;
+export default Game;
