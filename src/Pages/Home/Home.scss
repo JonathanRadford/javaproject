@@ -1,3 +1,7 @@
 .GameList {
   background-color: #464866;
+  &__header {
+    text-align: center;
+    padding: 3rem;
+  }
 }

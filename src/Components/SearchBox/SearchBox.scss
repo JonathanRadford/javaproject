@@ -1,0 +1,13 @@
+.search-box {
+  &__input {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}

@@ -19,6 +19,7 @@ const Home = () => {
 
   return (
     <div className="GameList">
+      <h1 className="GameList__header">Welcome to GameFinder.</h1>
       <GameList games={game} />
     </div>
   );
