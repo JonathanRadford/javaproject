@@ -11,8 +11,8 @@ function Navbar() {
       <Link to={"/add"} className="nav__add">
         <h2>Form</h2>{" "}
       </Link>
-      <Link to={"/search"} className="nav__search">
-        <h2>Search</h2>{" "}
+      <Link to={"/stats"} className="nav__stats">
+        <h2>Stats</h2>{" "}
       </Link>
     </div>
   );

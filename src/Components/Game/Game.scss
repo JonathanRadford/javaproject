@@ -1,13 +1,25 @@
-.greeting {
+@use "../../assets/sass/typography" as *;
+@use "../../assets/sass/variables" as *;
+
+.game {
   width: 70%;
   margin-top: 2rem;
   padding: 1rem;
-  background-color: #25274d;
-  color: white;
+  background-color: $background-color;
+  color: $font-color;
   border-radius: 5px;
+  border: 3px solid $font-color;
+  text-align: center;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
+  &__image {
+    width: 250px;
+    height: auto;
+    display: flex;
+    margin: 10px;
+    border: 3px solid $font-color;
+  }
 
   h3 {
     font-size: 32px;

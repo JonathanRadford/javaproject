@@ -1,26 +1,28 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import GameList from "../../Components/GameList/GameList";
+// import { useState, useEffect } from "react";
+// import GameList from "../../Components/GameList/GameList";
+import SearchBox from "../../Components/SearchBox/SearchBox";
 import "./Home.scss";
 
 const Home = () => {
-  const [game, setGame] = useState([]);
+  //   const [game, setGame] = useState([]);
 
-  const getGame = () => {
-    fetch("http://localhost:8080/gamefinder")
-      .then((res) => res.json())
-      .then((json) => console.log(setGame(json)))
-      .catch((err) => console.log(err));
-  };
+  //   const getGame = () => {
+  //     fetch("http://localhost:8080/gamefinder")
+  //       .then((res) => res.json())
+  //       .then((json) => setGame(json))
+  //       .catch((err) => err);
+  //   };
 
-  useEffect(() => {
-    getGame();
-  }, []);
+  //   useEffect(() => {
+  //     getGame();
+  //   }, []);
 
   return (
     <div className="GameList">
       <h1 className="GameList__header">Welcome to GameFinder.</h1>
-      <GameList games={game} />
+      <SearchBox />
+      {/* <GameList games={game} /> */}
     </div>
   );
 };

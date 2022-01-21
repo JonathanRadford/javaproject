@@ -1,11 +1,10 @@
 import React from "react";
-import SearchBox from "../../Components/SearchBox/SearchBox";
-import "./Search.scss";
-
+import Stats from "../../Components/Stats/Stats";
+import "./Stats.scss";
 const Add = () => {
   return (
     <div className="Search">
-      <SearchBox />
+      <Stats />
     </div>
   );
 };

@@ -1,9 +1,6 @@
 import { useState } from "react";
 import "./Form.scss";
 
-// form styles jacked from here
-// https://codepen.io/banunn/pen/AFnal
-
 const Form = () => {
   const [game, setGame] = useState({
     createdBy: "",
@@ -27,9 +24,9 @@ const Form = () => {
   };
 
   return (
-    <div className="log-form">
-      <h2>Add A New Game</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="form">
+      <h1>Add A New Game!</h1>
+      <form onSubmit={handleSubmit} className="form-input">
         <input
           type="text"
           placeholder="Your Name"
@@ -39,12 +36,40 @@ const Form = () => {
           type="text"
           placeholder="Game"
           onInput={(e) => setGame({ ...game, game: e.target.value })}
+          required
         />
-        <input
+        <select
           type="text"
           placeholder="Genre"
           onInput={(e) => setGame({ ...game, genre: e.target.value })}
+          required
+        >
+          <option value="Action/Adventure">Action/Adventure</option>
+          <option value="RPG">RPG</option>
+          <option value="Racing">Racing</option>
+          <option value="Sports">Sports</option>
+          <option value="Strategy">Strategy</option>
+          <option value="Fighting">Fighting</option>
+          <option value="Simulation">Simulation </option>
+          <option value="FPS">FPS</option>
+        </select>
+        <input
+          type="text"
+          placeholder="Game Length"
+          onInput={(e) => setGame({ ...game, gameLength: e.target.value })}
+          required
         />
+        <select
+          type="text"
+          placeholder="Console"
+          onInput={(e) => setGame({ ...game, console: e.target.value })}
+          required
+        >
+          <option value="Action/Adventure">Playstation</option>
+          <option value="RPG">Nintendo</option>
+          <option value="Racing">Xbox</option>
+          <option value="Sports">PC</option>
+        </select>
         <input
           type="text"
           placeholder="Comments"
@@ -52,8 +77,8 @@ const Form = () => {
         />
         <input
           type="text"
-          placeholder="Game Length"
-          onInput={(e) => setGame({ ...game, gameLength: e.target.value })}
+          placeholder="Add Image URL"
+          onInput={(e) => setGame({ ...game, image: e.target.value })}
         />
         <button type="submit" className="btn">
           Submit

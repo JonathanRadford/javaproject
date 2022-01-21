@@ -1,5 +1,9 @@
+@use "../../assets/sass/typography" as *;
+@use "../../assets/sass/variables" as *;
 .GameList {
-  background-color: #464866;
+  background-color: $background-secondary;
+  color: $font-color;
+  min-height: 100vh;
   &__header {
     text-align: center;
     padding: 3rem;

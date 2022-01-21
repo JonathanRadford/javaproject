@@ -1,7 +1,12 @@
 @use "../../assets/sass/typography" as *;
 @use "../../assets/sass/variables" as *;
-.container {
+
+.blah {
+  padding: 50px;
+  color: #aaabb8;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 }

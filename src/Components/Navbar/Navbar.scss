@@ -1,22 +1,25 @@
+@use "../../assets/sass/typography" as *;
+@use "../../assets/sass/variables" as *;
+
 * {
   margin: 0;
 }
 .nav {
-  background-color: #25274d;
+  background-color: $background-color;
   padding: 2rem;
   display: flex;
   justify-content: space-evenly;
   border-bottom: 0.2rem solid #2964ba;
   &__add {
-    color: #aaabb8;
+    color: $font-color;
     text-decoration: none;
   }
   &__home {
-    color: #aaabb8;
+    color: $font-color;
     text-decoration: none;
   }
-  &__search {
-    color: #aaabb8;
+  &__stats {
+    color: $font-color;
     text-decoration: none;
   }
 }

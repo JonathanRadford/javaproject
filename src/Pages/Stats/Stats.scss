@@ -1,7 +1,6 @@
 @use "../../assets/sass/typography" as *;
 @use "../../assets/sass/variables" as *;
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.Search {
+  background-color: $background-secondary;
+  min-height: 100vh;
 }
