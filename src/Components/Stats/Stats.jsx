@@ -39,6 +39,7 @@ const Stats = () => {
       })
       .then((game) => {
         setGameArray(game);
+        handleGameTime();
       })
       .catch((err) => err);
   }, []);
@@ -110,6 +111,7 @@ const Stats = () => {
     for (const num of gameAppears) {
       counts[num] = counts[num] ? counts[num] + 1 : 1;
     }
+    console.log(counts);
     return counts;
   };
 

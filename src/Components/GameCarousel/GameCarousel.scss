@@ -1,0 +1,74 @@
+@use "../../assets/sass/typography" as *;
+@use "../../assets/sass/variables" as *;
+
+// .container {
+//   display: flex;
+// }
+// .carousel__image {
+//   width: 250px;
+//   height: auto;
+//   margin: 10px;
+//   border: 3px solid $font-color;
+// }
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  transition: transform 10ms;
+
+  &__image {
+    display: block;
+    width: 75%;
+    max-height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 0 10px;
+    overflow: hidden;
+  }
+
+  &__button {
+    display: block;
+    height: 20px;
+    border-radius: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &--left {
+      left: 40px;
+      z-index: 2;
+      position: absolute;
+    }
+
+    &--right {
+      right: 40px;
+      z-index: 2;
+      position: absolute;
+    }
+  }
+}
+
+// @media screen and (min-width: 425px) {
+//   .carousel {
+//     &__image {
+//       max-height: 180px;
+//     }
+//   }
+// }
+// @media screen and (min-width: 768px) {
+//   .carousel {
+//     &__image {
+//       max-height: 320px;
+//     }
+//   }
+// }
+// @media screen and (min-width: 1028px) {
+//   .carousel {
+//     &__image {
+//       max-height: 00px;
+//     }
+//   }
+// }
