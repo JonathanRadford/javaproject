@@ -32,13 +32,6 @@ const Search = () => {
       return gameLower.includes(searchTerm);
     });
     setGamePrint(filteredArr);
-    // if (gamePrint === false || gamePrint === []) {
-    //   setAverageTime(0);
-    // } else {
-    //   const mappedArr = gamePrint.map((game) => game.gameLength);
-    //   const average = mappedArr.reduce((a, b) => a + b) / mappedArr.length;
-    //   setAverageTime(average);
-    // }
   };
 
   const gameTimeArr = gameArray.filter((game) => game.gameLength > gameTime);

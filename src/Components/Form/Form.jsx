@@ -62,18 +62,6 @@ const Form = () => {
           onInput={(e) => setGame({ ...game, gameLength: e.target.value })}
           required
         />
-        {/* <select
-          type="text"
-          placeholder="Console"
-          onInput={(e) => setGame({ ...game, console: e.target.value })}
-          required
-        >
-          <option value="null"></option>
-          <option value="Action/Adventure">Playstation</option>
-          <option value="RPG">Nintendo</option>
-          <option value="Racing">Xbox</option>
-          <option value="Sports">PC</option>
-        </select> */}
         <input
           type="text"
           placeholder="Comments"

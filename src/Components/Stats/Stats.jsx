@@ -26,8 +26,6 @@ const Stats = () => {
   const [gameArray, setGameArray] = useState([]);
   const [mostPlayed, setMostPlayed] = useState([]);
   const [topByTime, setTopByTime] = useState([]);
-  // const [byGenre, setByGenre] = useState([]);
-  // const [avgTime, setAvgTime] = useState("");
   const [timeToBeat, setTimeToBeat] = useState("");
 
   useEffect(() => {
@@ -68,10 +66,6 @@ const Stats = () => {
 
     setTopByTime(games);
     setTimeToBeat(topFiveTime);
-    // const genrePlayed = gameArray.map((game) => game.genre).sort();
-    // const average = averageArr.reduce((a, b) => a + b) / averageArr.length;
-    // setAvgTime(average);
-    // setByGenre(genrePlayed);
     setMostPlayed(gamePlayedArr);
   };
 
@@ -93,7 +87,6 @@ const Stats = () => {
   };
 
   const newLabel = sortByFrequency(mostPlayed);
-  // const topGenre = sortByFrequency(byGenre).slice(0, 5);
 
   const sorted = (array) => {
     let frequency = {};
@@ -173,13 +166,7 @@ const Stats = () => {
         <h1>Top Five Most Played Games</h1>
         <Bar data={data2} />
         <div className="search-box__content">
-          <div className="blah">
-            {/* <p>
-              Average time to beat {} is {avgTime} hours.
-            </p>
-            <p>{labels}, are the three most played games,</p>
-            <p>whilst {topGenre} are the top three genres added!</p> */}
-          </div>
+          <div className="blah"></div>
         </div>
       </div>
     </div>

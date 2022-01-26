@@ -9,7 +9,6 @@ const Game = (props) => {
       <p>Game Length: {gameLength} hours</p>
       <p>Added by: {createdBy}</p>
       <p>Genre: {genre}</p>
-      {/* <p>Console: {console}</p> */}
       <p>{comments}</p>
       <img src={image} alt={game} className="game__image" />
     </div>
