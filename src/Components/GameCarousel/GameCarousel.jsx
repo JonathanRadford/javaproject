@@ -16,7 +16,6 @@ const GameCarousel = () => {
   }, []);
 
   const gameImg = game.filter((game) => game.image).map((game) => game.image);
-
   const handleIncrement = () => {
     if (counter === gameImg.length - 1) {
       setCounter(0);

@@ -23,6 +23,9 @@ const Form = () => {
     window.location.reload();
   };
 
+  console.log(game.genre);
+  console.log(game.console);
+
   return (
     <div className="form">
       <h1>Add A New Game!</h1>
@@ -59,7 +62,7 @@ const Form = () => {
           onInput={(e) => setGame({ ...game, gameLength: e.target.value })}
           required
         />
-        <select
+        {/* <select
           type="text"
           placeholder="Console"
           onInput={(e) => setGame({ ...game, console: e.target.value })}
@@ -70,7 +73,7 @@ const Form = () => {
           <option value="RPG">Nintendo</option>
           <option value="Racing">Xbox</option>
           <option value="Sports">PC</option>
-        </select>
+        </select> */}
         <input
           type="text"
           placeholder="Comments"

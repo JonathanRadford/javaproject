@@ -26,10 +26,9 @@ const Stats = () => {
   const [gameArray, setGameArray] = useState([]);
   const [mostPlayed, setMostPlayed] = useState([]);
   const [topByTime, setTopByTime] = useState([]);
-  const [byGenre, setByGenre] = useState([]);
-  const [avgTime, setAvgTime] = useState("");
+  // const [byGenre, setByGenre] = useState([]);
+  // const [avgTime, setAvgTime] = useState("");
   const [timeToBeat, setTimeToBeat] = useState("");
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const URL = `http://localhost:8080/gamefinder`;
@@ -39,7 +38,6 @@ const Stats = () => {
       })
       .then((game) => {
         setGameArray(game);
-        handleGameTime();
       })
       .catch((err) => err);
   }, []);
@@ -67,13 +65,14 @@ const Stats = () => {
       });
     const topFiveTime = averageArr.slice(0, 5);
     const gamePlayedArr = gameArray.map((game) => game.game).sort();
-    const genrePlayed = gameArray.map((game) => game.genre).sort();
-    const average = averageArr.reduce((a, b) => a + b) / averageArr.length;
+
     setTopByTime(games);
     setTimeToBeat(topFiveTime);
-    setAvgTime(average);
+    // const genrePlayed = gameArray.map((game) => game.genre).sort();
+    // const average = averageArr.reduce((a, b) => a + b) / averageArr.length;
+    // setAvgTime(average);
+    // setByGenre(genrePlayed);
     setMostPlayed(gamePlayedArr);
-    setByGenre(genrePlayed);
   };
 
   const sortByFrequency = (array) => {
@@ -94,9 +93,8 @@ const Stats = () => {
   };
 
   const newLabel = sortByFrequency(mostPlayed);
-  const topGenre = sortByFrequency(byGenre).slice(0, 5);
+  // const topGenre = sortByFrequency(byGenre).slice(0, 5);
 
-  console.log(topGenre);
   const sorted = (array) => {
     let frequency = {};
 
@@ -165,11 +163,11 @@ const Stats = () => {
   };
 
   return (
-    <div className="search-box">
-      <div className="search-box__input">
+    <div className="stats">
+      <div className="search-button">
         <button onClick={handleGameTime}></button>
       </div>
-      <div className="search-box__items">
+      <div className="search-graphs">
         <h1>Top Five Most Hours</h1>
         <Doughnut data={data} />
         <h1>Top Five Most Played Games</h1>

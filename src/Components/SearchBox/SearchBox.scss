@@ -1,15 +1,26 @@
 @use "../../assets/sass/typography" as *;
 @use "../../assets/sass/variables" as *;
 .search-box {
-  &__input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__search-functions {
     display: flex;
+    background-color: $background-color;
     align-items: center;
     flex-direction: column;
     text-align: center;
     color: $font-color;
+    width: 40%;
+    border-radius: 5px;
+    border: 3px solid $font-color;
+    padding: 3rem;
     &-header {
       padding: 1rem;
     }
+  }
+  &__input {
+    margin: 1rem;
   }
   &__items {
     display: flex;

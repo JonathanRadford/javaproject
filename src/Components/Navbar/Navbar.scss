@@ -5,8 +5,10 @@
   margin: 0;
 }
 .nav {
+  position: fixed;
+  width: 100%;
   background-color: $background-color;
-  padding: 2rem;
+  padding: 2rem 0 2rem 0;
   display: flex;
   justify-content: space-evenly;
   border-bottom: 0.2rem solid #2964ba;
