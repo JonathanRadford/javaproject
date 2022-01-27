@@ -3,13 +3,49 @@
 
 .stats {
   padding-top: 100px;
-}
-.blah {
-  padding: 50px;
-  color: #aaabb8;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
+
+  line-height: 4rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__button {
+    background-color: $font-color;
+    border: 3px solid $background-color;
+    border-radius: 9rem;
+    padding: 0.3rem;
+  }
+  &-graphs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .stats {
+    padding-top: 100px;
+    display: block;
+    &-graphs {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      &__doughnut {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+      }
+      &__bar {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
 }

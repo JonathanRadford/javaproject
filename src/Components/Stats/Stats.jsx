@@ -156,14 +156,22 @@ const Stats = () => {
 
   return (
     <div className="stats">
-      <div className="stats-button">
-        <button onClick={handleGameTime}></button>
+      <div className="stats__container">
+        <h1>Gaming Stats</h1>
+        <button className="stats__button" onClick={handleGameTime}>
+          More Info
+        </button>
       </div>
-      <div className="search-graphs">
-        <h1>Top Five Most Hours</h1>
-        <Doughnut data={data} />
-        <h1>Top Five Most Played Games</h1>
-        <Bar data={data2} />
+      <div className="stats-graphs">
+        <div className="stats-graphs__doughnut">
+          <h2>Top Five Games with Most Hours</h2>
+
+          <Doughnut data={data} />
+        </div>
+        <div className="stats-graphs__bar">
+          <h2>Top Five Most Added Games</h2>
+          <Bar data={data2} />
+        </div>
       </div>
     </div>
   );

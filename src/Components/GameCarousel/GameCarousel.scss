@@ -51,24 +51,32 @@
   }
 }
 
-// @media screen and (min-width: 425px) {
-//   .carousel {
-//     &__image {
-//       max-height: 180px;
-//     }
-//   }
-// }
-// @media screen and (min-width: 768px) {
-//   .carousel {
-//     &__image {
-//       max-height: 320px;
-//     }
-//   }
-// }
-// @media screen and (min-width: 1028px) {
-//   .carousel {
-//     &__image {
-//       max-height: 00px;
-//     }
-//   }
-// }
+@media screen and (min-width: 425px) {
+  .carousel {
+    &__image {
+      max-height: 180px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .carousel {
+    &__image {
+      max-height: 320px;
+    }
+  }
+}
+@media screen and (min-width: 1028px) {
+  .carousel {
+    &__image {
+      max-height: 500px;
+      width: 80%;
+    }
+    &__button--left {
+      left: 185px;
+    }
+
+    &__button--right {
+      right: 185px;
+    }
+  }
+}
