@@ -20,21 +20,24 @@ const Search = () => {
       })
       .catch((err) => err);
   }, []);
+  const gameTimeArr = gameArray.filter((game) => game.gameLength > gameTime);
+  const filteredArr = () => {
+    const filtered = gameTimeArr.filter((game) => {
+      const gameReturn = game.game.toLowerCase();
+      return gameReturn.includes(searchTerm);
+    });
+    setGamePrint(filtered);
+  };
 
   const handleGameInput = (event) => {
     setSearchTerm(event.target.value.toLowerCase().toString());
+    filteredArr();
   };
 
   const handleChange = (event) => {
     setGameTime(event.target.value);
-    const filteredArr = gameTimeArr.filter((game) => {
-      const gameLower = game.game.toLowerCase();
-      return gameLower.includes(searchTerm);
-    });
-    setGamePrint(filteredArr);
+    filteredArr();
   };
-
-  const gameTimeArr = gameArray.filter((game) => game.gameLength > gameTime);
 
   return (
     <div className="search-box">

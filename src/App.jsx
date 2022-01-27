@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Add from "./Pages/Add/Add";
 import { Route, Routes } from "react-router-dom";
 import Stats from "./Pages/Stats/Stats";
+import React from "react";
 
 const Dashboard = () => {
   return (

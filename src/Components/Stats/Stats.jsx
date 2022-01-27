@@ -102,7 +102,6 @@ const Stats = () => {
     for (const num of gameAppears) {
       counts[num] = counts[num] ? counts[num] + 1 : 1;
     }
-    console.log(counts);
     return counts;
   };
 
@@ -157,7 +156,7 @@ const Stats = () => {
 
   return (
     <div className="stats">
-      <div className="search-button">
+      <div className="stats-button">
         <button onClick={handleGameTime}></button>
       </div>
       <div className="search-graphs">
@@ -165,9 +164,6 @@ const Stats = () => {
         <Doughnut data={data} />
         <h1>Top Five Most Played Games</h1>
         <Bar data={data2} />
-        <div className="search-box__content">
-          <div className="blah"></div>
-        </div>
       </div>
     </div>
   );

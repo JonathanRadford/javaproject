@@ -17,14 +17,11 @@ const Form = () => {
       body: JSON.stringify(game),
     })
       .then((response) => response.json())
-      .then((json) => console.log(json))
-      .catch((err) => console.log(err));
+      .then((json) => json)
+      .catch((err) => err);
     e.target.reset();
     window.location.reload();
   };
-
-  console.log(game.genre);
-  console.log(game.console);
 
   return (
     <div className="form">

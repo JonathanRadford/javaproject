@@ -1,0 +1,45 @@
+@use "../../assets/sass/typography" as *;
+@use "../../assets/sass/variables" as *;
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-open {
+  padding: 0;
+}
+.modal-content {
+  background-color: $font-color;
+  position: fixed;
+  top: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem;
+  height: 15rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: 3px solid $background-color;
+  border-radius: 15px;
+  line-height: 1.5rem;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.Modal__image {
+  display: flex;
+  width: 70%;
+  min-height: 30%;
+  border: 3px solid $background-color;
+  border-radius: 15px;
+}
+
+.Modal__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
